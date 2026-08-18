@@ -9,11 +9,26 @@
 <body>
 
     <header>
+        <button id="btn-config" onclick="toggleConfiguracoes()">⚙️ Configurações</button>
         <h1>Introdução ao Agosto Lilás</h1>
         <p>Conscientização e combate à violência contra a mulher</p>
     </header>
 
     <main class="container">
+
+        <!-- PAINEL DE CONFIGURAÇÕES (ESCONDIDO POR PADRÃO) -->
+        <div id="painel-config" class="painel-oculto">
+            <h3>Acessibilidade e Personalização</h3>
+            <div class="opcao-config">
+                <span>Tamanho do Texto:</span>
+                <button onclick="alterarFonte(10)">A+</button>
+                <button onclick="alterarFonte(-10)">A-</button>
+            </div>
+            <div class="opcao-config">
+                <span>Modo de Exibição:</span>
+                <button onclick="alternarTema()">Alternar Tema (Claro/Escuro)</button>
+            </div>
+        </div>
 
         <div class="botoes-container">
             <button class="botao" onclick="mostrarInfo('lei')">O que é a Lei?</button>
