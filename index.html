@@ -16,7 +16,7 @@
 
     <main class="container">
 
-        <!-- PAINEL DE CONFIGURAÇÕES (ESCONDIDO POR PADRÃO) -->
+        <!-- Painel de Configurações de Acessibilidade -->
         <div id="painel-config" class="painel-oculto">
             <h3>Acessibilidade e Personalização</h3>
             <div class="opcao-config">
@@ -30,14 +30,14 @@
             </div>
         </div>
 
+        <!-- 3 Botões de Atalho para rolagem na própria página -->
         <div class="botoes-container">
-            <button class="botao" onclick="mostrarInfo('lei')">O que é a Lei?</button>
-            <button class="botao" onclick="mostrarInfo('denuncia')">Como Denunciar</button>
-            <button class="botao" onclick="mostrarInfo('apoio')">Rede de Apoio</button>
+            <a href="#lei" class="botao">O que é a Lei?</a>
+            <a href="#denuncia" class="botao">Como Denunciar</a>
+            <a href="#apoio" class="botao">Rede de Apoio</a>
         </div>
 
-        <div id="mensagem-interativa" class="mensagem-oculta"></div>
-
+        <!-- Introdução da Campanha -->
         <section class="secao-conteudo">
             <h2>Sobre a Campanha</h2>
             <p>O <strong>Agosto Lilás</strong> é uma campanha de conscientização pelo fim da violência contra a mulher, criada em referência ao aniversário da <strong>Lei Maria da Penha</strong> (7 de agosto de 2006).</p>
@@ -50,9 +50,48 @@
             </div>
         </section>
 
+        <!-- Seção 1: A Lei -->
+        <section id="lei" class="secao-conteudo">
+            <h2>O que é a Lei Maria da Penha?</h2>
+            <p>Sancionada em 7 de agosto de 2006 (Lei nº 11.340), a lei cria mecanismos para coibir e prevenir a violência doméstica e familiar contra a mulher no Brasil.</p>
+            <p>Ela garante <strong>Medidas Protetivas de Urgência</strong>, que podem incluir o afastamento do agressor do lar e a proibição de aproximação ou contato com a vítima e seus familiares.</p>
+            
+            <h3>Tipos de Violência Previstos na Lei:</h3>
+            <ul>
+                <li><strong>Física:</strong> Condutas que ofendam a integridade ou saúde corporal.</li>
+                <li><strong>Psicológica:</strong> Danos emocionais, diminuição da autoestima e controle de ações.</li>
+                <li><strong>Sexual:</strong> Relação sexual não desejada mediante intimidação ou força.</li>
+                <li><strong>Patrimonial:</strong> Retenção, subtração ou destruição de bens e documentos.</li>
+                <li><strong>Moral:</strong> Calúnia, difamação ou injúria.</li>
+            </ul>
+        </section>
+
+        <!-- Seção 2: Denúncias -->
+        <section id="denuncia" class="secao-conteudo">
+            <h2>Como Denunciar?</h2>
+            <p>Existem diversos canais de atendimento gratuitos e confidenciais disponíveis para denúncias ou orientação:</p>
+            <ul>
+                <li><strong>Ligue 180:</strong> Central de Atendimento à Mulher (gratuito, anônimo e funciona 24 horas).</li>
+                <li><strong>Ligue 190:</strong> Polícia Militar (para emergências e situações de flagrante).</li>
+                <li><strong>Aplicativo Direitos Humanos Brasil:</strong> Canal de denúncia acessível online.</li>
+            </ul>
+        </section>
+
+        <!-- Seção 3: Rede de Apoio -->
+        <section id="apoio" class="secao-conteudo">
+            <h2>Rede de Apoio e Onde Buscar Ajuda</h2>
+            <p>A rede de atendimento conta com órgãos especializados para oferecer acolhimento social, jurídico e psicológico:</p>
+            <ul>
+                <li><strong>DEAM:</strong> Delegacia Especializada de Atendimento à Mulher.</li>
+                <li><strong>CREAS / CRAS:</strong> Centros de Referência de Assistência Social do município.</li>
+                <li><strong>Defensoria Pública:</strong> Orientação jurídica gratuita para quem não tem condições financeiras.</li>
+            </ul>
+        </section>
+
+        <!-- Conteúdo Complementar -->
         <section class="secao-conteudo">
             <h2>Conteúdo Complementar</h2>
-            <p>A violência doméstica pode ser física, psicológica, moral, sexual ou patrimonial. O apoio de toda a sociedade é fundamental para identificar os sinais e auxiliar as vítimas através dos centros comunitários e delegacias especializadas (DEAM).</p>
+            <p>A violência doméstica pode afetar mulheres de todas as idades e classes sociais. O apoio de toda a sociedade é fundamental para identificar os sinais e auxiliar as vítimas a romperem o ciclo da violência.</p>
         </section>
 
     </main>
