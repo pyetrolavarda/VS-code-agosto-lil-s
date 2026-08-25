@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -22,7 +26,7 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 2.3em;
 }
 
 #btn-config {
@@ -49,7 +53,7 @@ header h1 {
 }
 
 .painel-oculto {
-    display: none;
+    display: none !important;
 }
 
 #painel-config {
@@ -59,11 +63,6 @@ header h1 {
     border-radius: 8px;
     margin-bottom: 25px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-#painel-config h3 {
-    margin-top: 0;
-    color: #6a1b9a;
 }
 
 .opcao-config {
@@ -94,15 +93,12 @@ header h1 {
     flex: 1;
     background-color: #8e24aa;
     color: white;
-    padding: 20px;
+    padding: 18px;
     text-align: center;
-    border: none;
     border-radius: 8px;
     font-weight: bold;
     font-size: 1.1em;
-    cursor: pointer;
     text-decoration: none;
-    display: block;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: background-color 0.3s, transform 0.2s;
 }
@@ -121,9 +117,19 @@ header h1 {
     border-left: 5px solid #8e24aa;
 }
 
-.secao-conteudo h2, .secao-conteudo h3 {
+.secao-conteudo strong.titulo-secao {
+    display: block;
+    font-size: 1.4em;
     color: #6a1b9a;
-    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.secao-conteudo ul {
+    line-height: 1.6;
+}
+
+.secao-conteudo li {
+    margin-bottom: 10px;
 }
 
 .galeria {
@@ -134,25 +140,10 @@ header h1 {
 }
 
 .galeria img {
-    width: 32%;
+    flex: 1;
+    max-width: 100%;
     border-radius: 8px;
     object-fit: cover;
-}
-
-.botao-voltar {
-    display: inline-block;
-    background-color: #6a1b9a;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-bottom: 20px;
-    transition: background-color 0.3s;
-}
-
-.botao-voltar:hover {
-    background-color: #4a148c;
 }
 
 footer {
@@ -180,14 +171,11 @@ body.dark-mode .secao-conteudo {
     border-left-color: #ba68c8;
 }
 
-body.dark-mode #painel-config h3,
-body.dark-mode .secao-conteudo h2,
-body.dark-mode .secao-conteudo h3 {
+body.dark-mode .secao-conteudo strong.titulo-secao {
     color: #ce93d8;
 }
 
 body.dark-mode .botao,
-body.dark-mode .botao-voltar,
 body.dark-mode .opcao-config button {
     background-color: #6a1b9a;
 }
