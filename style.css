@@ -22,7 +22,7 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2.3em;
+    font-size: 2.2em;
 }
 
 #btn-config {
@@ -43,13 +43,13 @@ header h1 {
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 900px;
     margin: 30px auto;
     padding: 0 20px;
 }
 
 .painel-oculto {
-    display: none;
+    display: none !important;
 }
 
 #painel-config {
@@ -89,12 +89,12 @@ header h1 {
     flex: 1;
     background-color: #8e24aa;
     color: white;
-    padding: 20px;
+    padding: 16px;
     text-align: center;
     border: none;
     border-radius: 8px;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1em;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: background-color 0.3s, transform 0.2s;
@@ -107,9 +107,9 @@ header h1 {
 
 .secao-conteudo {
     background-color: white;
-    padding: 30px;
+    padding: 25px;
     border-radius: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     border-left: 5px solid #8e24aa;
 }
@@ -121,26 +121,26 @@ header h1 {
     margin-bottom: 15px;
 }
 
-.secao-conteudo ul, .secao-conteudo ol {
-    line-height: 1.6;
-}
-
-.secao-conteudo li {
-    margin-bottom: 10px;
+.imagem-conteudo, .imagem-destaque {
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 15px 0;
 }
 
 .galeria {
     display: flex;
-    justify-content: space-between;
     gap: 15px;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .galeria img {
     flex: 1;
-    max-width: 100%;
-    border-radius: 8px;
+    width: 33%;
+    height: 180px;
     object-fit: cover;
+    border-radius: 8px;
 }
 
 footer {
@@ -148,7 +148,7 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 body.dark-mode {
