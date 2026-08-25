@@ -1,108 +1,197 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agosto Lilás - Conscientização</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+* {
+    box-sizing: border-box;
+}
 
-    <header>
-        <button id="btn-config" onclick="toggleConfiguracoes()">⚙️ Configurações</button>
-        <h1>Introdução ao Agosto Lilás</h1>
-        <p>Conscientização e combate à violência contra a mulher</p>
-    </header>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdf8ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    transition: background-color 0.3s, color 0.3s;
+}
 
-    <main class="container">
+header {
+    background-color: #6a1b9a;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    position: relative;
+}
 
-        <!-- Painel de Configurações de Acessibilidade -->
-        <div id="painel-config" class="painel-oculto">
-            <h3>Acessibilidade e Personalização</h3>
-            <div class="opcao-config">
-                <span>Tamanho do Texto:</span>
-                <button onclick="alterarFonte(10)">A+</button>
-                <button onclick="alterarFonte(-10)">A-</button>
-            </div>
-            <div class="opcao-config">
-                <span>Modo de Exibição:</span>
-                <button onclick="alternarTema()">Alternar Tema (Claro/Escuro)</button>
-            </div>
-        </div>
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
 
-        <!-- 3 Botões de Atalho para rolagem na própria página -->
-        <div class="botoes-container">
-            <a href="#lei" class="botao">O que é a Lei?</a>
-            <a href="#denuncia" class="botao">Como Denunciar</a>
-            <a href="#apoio" class="botao">Rede de Apoio</a>
-        </div>
+#btn-config {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
 
-        <!-- Introdução da Campanha -->
-        <section class="secao-conteudo">
-            <h2>Sobre a Campanha</h2>
-            <p>O <strong>Agosto Lilás</strong> é uma campanha de conscientização pelo fim da violência contra a mulher, criada em referência ao aniversário da <strong>Lei Maria da Penha</strong> (7 de agosto de 2006).</p>
-            <p>O objetivo é informar a população sobre as formas de prevenção e os canais de denúncia, como o <strong>Ligue 180</strong>.</p>
-            
-            <div class="galeria">
-                <img src="https://via.placeholder.com/400x250/8e24aa/ffffff?text=Lei+Maria+da+Penha" alt="Lei Maria da Penha">
-                <img src="https://via.placeholder.com/400x250/ab47bc/ffffff?text=Ligue+180" alt="Ligue 180">
-                <img src="https://via.placeholder.com/400x250/ce93d8/ffffff?text=Conscientização" alt="Conscientização">
-            </div>
-        </section>
+#btn-config:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
 
-        <!-- Seção 1: A Lei -->
-        <section id="lei" class="secao-conteudo">
-            <h2>O que é a Lei Maria da Penha?</h2>
-            <p>Sancionada em 7 de agosto de 2006 (Lei nº 11.340), a lei cria mecanismos para coibir e prevenir a violência doméstica e familiar contra a mulher no Brasil.</p>
-            <p>Ela garante <strong>Medidas Protetivas de Urgência</strong>, que podem incluir o afastamento do agressor do lar e a proibição de aproximação ou contato com a vítima e seus familiares.</p>
-            
-            <h3>Tipos de Violência Previstos na Lei:</h3>
-            <ul>
-                <li><strong>Física:</strong> Condutas que ofendam a integridade ou saúde corporal.</li>
-                <li><strong>Psicológica:</strong> Danos emocionais, diminuição da autoestima e controle de ações.</li>
-                <li><strong>Sexual:</strong> Relação sexual não desejada mediante intimidação ou força.</li>
-                <li><strong>Patrimonial:</strong> Retenção, subtração ou destruição de bens e documentos.</li>
-                <li><strong>Moral:</strong> Calúnia, difamação ou injúria.</li>
-            </ul>
-        </section>
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
 
-        <!-- Seção 2: Denúncias -->
-        <section id="denuncia" class="secao-conteudo">
-            <h2>Como Denunciar?</h2>
-            <p>Existem diversos canais de atendimento gratuitos e confidenciais disponíveis para denúncias ou orientação:</p>
-            <ul>
-                <li><strong>Ligue 180:</strong> Central de Atendimento à Mulher (gratuito, anônimo e funciona 24 horas).</li>
-                <li><strong>Ligue 190:</strong> Polícia Militar (para emergências e situações de flagrante).</li>
-                <li><strong>Aplicativo Direitos Humanos Brasil:</strong> Canal de denúncia acessível online.</li>
-            </ul>
-        </section>
+.painel-oculto {
+    display: none;
+}
 
-        <!-- Seção 3: Rede de Apoio -->
-        <section id="apoio" class="secao-conteudo">
-            <h2>Rede de Apoio e Onde Buscar Ajuda</h2>
-            <p>A rede de atendimento conta com órgãos especializados para oferecer acolhimento social, jurídico e psicológico:</p>
-            <ul>
-                <li><strong>DEAM:</strong> Delegacia Especializada de Atendimento à Mulher.</li>
-                <li><strong>CREAS / CRAS:</strong> Centros de Referência de Assistência Social do município.</li>
-                <li><strong>Defensoria Pública:</strong> Orientação jurídica gratuita para quem não tem condições financeiras.</li>
-            </ul>
-        </section>
+#painel-config {
+    background-color: white;
+    border: 2px solid #8e24aa;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
 
-        <!-- Conteúdo Complementar -->
-        <section class="secao-conteudo">
-            <h2>Conteúdo Complementar</h2>
-            <p>A violência doméstica pode afetar mulheres de todas as idades e classes sociais. O apoio de toda a sociedade é fundamental para identificar os sinais e auxiliar as vítimas a romperem o ciclo da violência.</p>
-        </section>
+#painel-config h3 {
+    margin-top: 0;
+    color: #6a1b9a;
+}
 
-    </main>
+.opcao-config {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
-    <footer>
-        <p><strong>Criador(a):</strong> [Seu Nome Aqui]</p>
-        <p><strong>Ano:</strong> 2026</p>
-        <p><strong>Instituição:</strong> [Nome da Instituição]</p>
-        <p><strong>Local:</strong> [Sua Cidade - UF]</p>
-    </footer>
+.opcao-config button {
+    background-color: #8e24aa;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+.botoes-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.botao {
+    flex: 1;
+    background-color: #8e24aa;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.botao:hover {
+    background-color: #4a148c;
+    transform: translateY(-2px);
+}
+
+.secao-conteudo {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    border-left: 5px solid #8e24aa;
+}
+
+.secao-conteudo h2, .secao-conteudo h3 {
+    color: #6a1b9a;
+    margin-top: 0;
+}
+
+.galeria {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.galeria img {
+    width: 32%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.botao-voltar {
+    display: inline-block;
+    background-color: #6a1b9a;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+.botao-voltar:hover {
+    background-color: #4a148c;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* Modo Escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background-color: #3b0066;
+}
+
+body.dark-mode #painel-config,
+body.dark-mode .secao-conteudo {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border-left-color: #ba68c8;
+}
+
+body.dark-mode #painel-config h3,
+body.dark-mode .secao-conteudo h2,
+body.dark-mode .secao-conteudo h3 {
+    color: #ce93d8;
+}
+
+body.dark-mode .botao,
+body.dark-mode .botao-voltar,
+body.dark-mode .opcao-config button {
+    background-color: #6a1b9a;
+}
+
+body.dark-mode footer {
+    background-color: #050505;
+}
