@@ -16,6 +16,7 @@
 
     <main class="container">
 
+        <!-- Painel de Configurações de Acessibilidade -->
         <div id="painel-config" class="painel-oculto">
             <h3>Acessibilidade e Personalização</h3>
             <div class="opcao-config">
@@ -29,13 +30,20 @@
             </div>
         </div>
 
-        <!-- 3 Botões direcionando cada um para sua respectiva página -->
+        <!-- 3 Botões divididos igualmente -->
         <div class="botoes-container">
-            <a href="lei.html" class="botao">O que é a Lei?</a>
-            <a href="denuncia.html" class="botao">Como Denunciar</a>
-            <a href="apoio.html" class="botao">Rede de Apoio</a>
+            <button class="botao" onclick="mostrarConteudo('lei')">O que é a Lei?</button>
+            <button class="botao" onclick="mostrarConteudo('denuncia')">Como Denunciar</button>
+            <button class="botao" onclick="mostrarConteudo('apoio')">Rede de Apoio</button>
         </div>
 
+        <!-- Área de Conteúdo Exclusivo (atualizada via JavaScript) -->
+        <div id="conteudo-dinamico" class="secao-conteudo">
+            <h2>Selecione uma opção acima</h2>
+            <p>Clique em um dos três botões para visualizar o conteúdo completo sobre a Lei Maria da Penha, canais de denúncia ou rede de apoio.</p>
+        </div>
+
+        <!-- Introdução Geral -->
         <section class="secao-conteudo">
             <h2>Sobre a Campanha</h2>
             <p>O <strong>Agosto Lilás</strong> é uma campanha de conscientização pelo fim da violência contra a mulher, criada em referência ao aniversário da <strong>Lei Maria da Penha</strong> (7 de agosto de 2006).</p>
@@ -48,6 +56,7 @@
             </div>
         </section>
 
+        <!-- Conteúdo Complementar -->
         <section class="secao-conteudo">
             <h2>Conteúdo Complementar</h2>
             <p>A violência doméstica pode afetar mulheres de todas as idades e classes sociais. O apoio de toda a sociedade é fundamental para identificar os sinais e auxiliar as vítimas a romperem o ciclo da violência.</p>
