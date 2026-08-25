@@ -1,197 +1,70 @@
-* {
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agosto Lilás - Conscientização</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fdf8ff;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    font-size: 100%;
-    transition: background-color 0.3s, color 0.3s;
-}
+    <header>
+        <button id="btn-config" onclick="toggleConfiguracoes()">⚙️ Configurações</button>
+        <h1>Introdução ao Agosto Lilás</h1>
+        <p>Conscientização e combate à violência contra a mulher</p>
+    </header>
 
-header {
-    background-color: #6a1b9a;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
-    position: relative;
-}
+    <main class="container">
 
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
+        <!-- Painel de Configurações de Acessibilidade -->
+        <div id="painel-config" class="painel-oculto">
+            <h3>Acessibilidade e Personalização</h3>
+            <div class="opcao-config">
+                <span>Tamanho do Texto:</span>
+                <button onclick="alterarFonte(10)">A+</button>
+                <button onclick="alterarFonte(-10)">A-</button>
+            </div>
+            <div class="opcao-config">
+                <span>Modo de Exibição:</span>
+                <button onclick="alternarTema()">Alternar Tema (Claro/Escuro)</button>
+            </div>
+        </div>
 
-#btn-config {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-    border: 1px solid white;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
+        <!-- 3 Botões/Links divididos igualmente -->
+        <div class="botoes-container">
+            <a href="pagina-detalhes.html#lei" class="botao">O que é a Lei?</a>
+            <a href="pagina-detalhes.html#denuncia" class="botao">Como Denunciar</a>
+            <a href="pagina-detalhes.html#apoio" class="botao">Rede de Apoio</a>
+        </div>
 
-#btn-config:hover {
-    background-color: rgba(255, 255, 255, 0.4);
-}
+        <!-- Seção de Informações -->
+        <section class="secao-conteudo">
+            <h2>Sobre a Campanha</h2>
+            <p>O <strong>Agosto Lilás</strong> é uma campanha de conscientização pelo fim da violência contra a mulher, criada em referência ao aniversário da <strong>Lei Maria da Penha</strong> (7 de agosto de 2006).</p>
+            <p>O objetivo é informar a população sobre as formas de prevenção e os canais de denúncia, como o <strong>Ligue 180</strong>.</p>
+            
+            <div class="galeria">
+                <img src="https://via.placeholder.com/400x250/8e24aa/ffffff?text=Lei+Maria+da+Penha" alt="Lei Maria da Penha">
+                <img src="https://via.placeholder.com/400x250/ab47bc/ffffff?text=Ligue+180" alt="Ligue 180">
+                <img src="https://via.placeholder.com/400x250/ce93d8/ffffff?text=Conscientização" alt="Conscientização">
+            </div>
+        </section>
 
-.container {
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 0 20px;
-}
+        <!-- Conteúdo Complementar -->
+        <section class="secao-conteudo">
+            <h2>Conteúdo Complementar</h2>
+            <p>A violência doméstica pode ser física, psicológica, moral, sexual ou patrimonial. O apoio de toda a sociedade é fundamental para identificar os sinais e auxiliar as vítimas através dos centros comunitários e delegacias especializadas (DEAM).</p>
+        </section>
 
-.painel-oculto {
-    display: none;
-}
+    </main>
 
-#painel-config {
-    background-color: white;
-    border: 2px solid #8e24aa;
-    padding: 15px 20px;
-    border-radius: 8px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
+    <footer>
+        <p><strong>Criador(a):</strong> [Seu Nome Aqui]</p>
+        <p><strong>Ano:</strong> 2026</p>
+        <p><strong>Instituição:</strong> [Nome da Instituição]</p>
+        <p><strong>Local:</strong> [Sua Cidade - UF]</p>
+    </footer>
 
-#painel-config h3 {
-    margin-top: 0;
-    color: #6a1b9a;
-}
-
-.opcao-config {
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.opcao-config button {
-    background-color: #8e24aa;
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.botoes-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    margin-bottom: 25px;
-}
-
-.botao {
-    flex: 1;
-    background-color: #8e24aa;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 1.1em;
-    cursor: pointer;
-    text-decoration: none;
-    display: block;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.botao:hover {
-    background-color: #4a148c;
-    transform: translateY(-2px);
-}
-
-.secao-conteudo {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    border-left: 5px solid #8e24aa;
-}
-
-.secao-conteudo h2, .secao-conteudo h3 {
-    color: #6a1b9a;
-    margin-top: 0;
-}
-
-.galeria {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.galeria img {
-    width: 32%;
-    border-radius: 8px;
-    object-fit: cover;
-}
-
-.botao-voltar {
-    display: inline-block;
-    background-color: #6a1b9a;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-bottom: 20px;
-    transition: background-color 0.3s;
-}
-
-.botao-voltar:hover {
-    background-color: #4a148c;
-}
-
-footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
-}
-
-/* Modo Escuro */
-body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
-}
-
-body.dark-mode header {
-    background-color: #3b0066;
-}
-
-body.dark-mode #painel-config,
-body.dark-mode .secao-conteudo {
-    background-color: #1e1e1e;
-    color: #e0e0e0;
-    border-left-color: #ba68c8;
-}
-
-body.dark-mode #painel-config h3,
-body.dark-mode .secao-conteudo h2,
-body.dark-mode .secao-conteudo h3 {
-    color: #ce93d8;
-}
-
-body.dark-mode .botao,
-body.dark-mode .botao-voltar,
-body.dark-mode .opcao-config button {
-    background-color: #6a1b9a;
-}
-
-body.dark-mode footer {
-    background-color: #050505;
-}
+    <script src="script.js"></script>
+</body>
+</html>
