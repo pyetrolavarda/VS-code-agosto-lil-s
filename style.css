@@ -22,7 +22,7 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2.3em;
+    font-size: 2.5em;
 }
 
 #btn-config {
@@ -61,6 +61,11 @@ header h1 {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+#painel-config h3 {
+    margin-top: 0;
+    color: #6a1b9a;
+}
+
 .opcao-config {
     margin: 10px 0;
     display: flex;
@@ -91,11 +96,13 @@ header h1 {
     color: white;
     padding: 20px;
     text-align: center;
+    border: none;
     border-radius: 8px;
     font-weight: bold;
     font-size: 1.1em;
     cursor: pointer;
     text-decoration: none;
+    display: block;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: background-color 0.3s, transform 0.2s;
 }
@@ -114,19 +121,9 @@ header h1 {
     border-left: 5px solid #8e24aa;
 }
 
-.secao-conteudo strong {
-    display: block;
-    font-size: 1.3em;
+.secao-conteudo h2, .secao-conteudo h3 {
     color: #6a1b9a;
-    margin-bottom: 15px;
-}
-
-.secao-conteudo ul, .secao-conteudo ol {
-    line-height: 1.6;
-}
-
-.secao-conteudo li {
-    margin-bottom: 10px;
+    margin-top: 0;
 }
 
 .galeria {
@@ -137,8 +134,7 @@ header h1 {
 }
 
 .galeria img {
-    flex: 1;
-    max-width: 100%;
+    width: 32%;
     border-radius: 8px;
     object-fit: cover;
 }
@@ -184,7 +180,9 @@ body.dark-mode .secao-conteudo {
     border-left-color: #ba68c8;
 }
 
-body.dark-mode .secao-conteudo strong {
+body.dark-mode #painel-config h3,
+body.dark-mode .secao-conteudo h2,
+body.dark-mode .secao-conteudo h3 {
     color: #ce93d8;
 }
 
