@@ -1,232 +1,178 @@
-/* Variáveis Premium */
-:root {
-    --bg-color: #f8f6fb;
-    --text-color: #2d3436;
-    --primary-color: #7b2cbf;
-    --primary-hover: #5a189a;
-    --card-bg: #ffffff;
-    --font-base: 16px;
-    --shadow: 0 10px 30px rgba(123, 44, 191, 0.1);
-}
-
-/* Modo Escuro Premium */
-.dark-mode {
-    --bg-color: #121212;
-    --text-color: #e0e0e0;
-    --card-bg: #1e1e1e;
-    --primary-color: #9d4edd;
-    --primary-hover: #c77dff;
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
 * {
     box-sizing: border-box;
 }
 
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: 'Poppins', sans-serif;
-    font-size: var(--font-base);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdf8ff;
+    color: #333;
     margin: 0;
     padding: 0;
-    transition: background-color 0.4s ease, color 0.4s ease;
+    font-size: 100%;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Header Estilizado (Hero) */
-.hero-header {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+header {
+    background-color: #6a1b9a;
     color: white;
-    padding: 60px 20px;
     text-align: center;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-    margin-bottom: -40px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    padding: 30px 20px;
+    position: relative;
 }
 
-.hero-header h1 {
-    font-size: 3em;
-    margin: 0 0 15px 0;
-    font-weight: 600;
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
 }
 
-.hero-header p {
-    max-width: 700px;
-    margin: 0 auto;
-    font-size: 1.1em;
-    opacity: 0.9;
+#btn-config {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#btn-config:hover {
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
 }
 
-/* Botão de Configuração Elegante */
-.config-btn {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: var(--card-bg);
-    color: var(--primary-color);
-    border: none;
-    border-radius: 50%;
-    width: 55px;
-    height: 55px;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    z-index: 100;
+.painel-oculto {
+    display: none;
+}
+
+#painel-config {
+    background-color: white;
+    border: 2px solid #8e24aa;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#painel-config h3 {
+    margin-top: 0;
+    color: #6a1b9a;
+}
+
+.opcao-config {
+    margin: 10px 0;
     display: flex;
     align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease;
-}
-
-.config-btn:hover {
-    transform: rotate(90deg) scale(1.1);
-}
-
-/* Menu de Acessibilidade */
-.config-menu {
-    position: fixed;
-    top: 90px;
-    right: 20px;
-    background-color: var(--card-bg);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: var(--shadow);
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    z-index: 99;
-    min-width: 200px;
-    opacity: 1;
-    transform: translateY(0);
-    transition: all 0.3s ease;
-}
-
-.config-menu.hidden {
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-20px);
-}
-
-.config-menu h3 {
-    margin: 0;
-    font-size: 1.1em;
-    color: var(--primary-color);
-    text-align: center;
-}
-
-.config-menu button {
-    padding: 10px;
-    cursor: pointer;
-    border: 1px solid var(--primary-color);
-    background: transparent;
-    color: var(--text-color);
-    border-radius: 8px;
-    font-weight: 600;
-    transition: all 0.2s;
-}
-
-.config-menu button:hover {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-.font-controls {
-    display: flex;
     gap: 10px;
 }
 
-.font-controls button {
-    flex: 1;
-}
-
-/* Cartões (Cards) Premium */
-.cards {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 60px;
-}
-
-.card {
-    background-color: var(--card-bg);
-    border-radius: 15px;
-    box-shadow: var(--shadow);
-    width: 320px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(123, 44, 191, 0.2);
-}
-
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.card-content {
-    padding: 25px;
-    text-align: center;
-}
-
-.card-content h2 {
-    color: var(--primary-color);
-    margin-top: 0;
-    font-size: 1.4em;
-}
-
-.card-content p {
-    font-size: 0.95em;
-    color: var(--text-color);
-    margin-bottom: 25px;
-    line-height: 1.5;
-}
-
-/* Botões */
-.btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: var(--primary-color);
+.opcao-config button {
+    background-color: #8e24aa;
     color: white;
-    text-decoration: none;
-    border-radius: 25px; /* Botões arredondados */
-    font-weight: 600;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.botoes-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.botao {
+    flex: 1;
+    background-color: #8e24aa;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: background-color 0.3s, transform 0.2s;
 }
 
-.btn:hover {
-    background-color: var(--primary-hover);
-    transform: scale(1.05);
+.botao:hover {
+    background-color: #4a148c;
+    transform: translateY(-2px);
 }
 
-/* Estilo das Páginas Internas */
-.page-content {
-    margin-top: 100px;
-}
-
-.content-box {
-    background-color: var(--card-bg);
-    padding: 50px;
-    border-radius: 15px;
-    box-shadow: var(--shadow);
-    margin: 20px auto;
-    max-width: 800px;
-    font-size: 1.1em;
-    line-height: 1.8;
-}
-
-.content-box h1 {
-    color: var(--primary-color);
-    text-align: center;
+.secao-conteudo {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
     margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    border-left: 5px solid #8e24aa;
+}
+
+.secao-conteudo h2, .secao-conteudo h3 {
+    color: #6a1b9a;
+    margin-top: 0;
+}
+
+.galeria {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.galeria img {
+    width: 32%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* Modo Escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background-color: #3b0066;
+}
+
+body.dark-mode #painel-config,
+body.dark-mode .secao-conteudo {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border-left-color: #ba68c8;
+}
+
+body.dark-mode #painel-config h3,
+body.dark-mode .secao-conteudo h2,
+body.dark-mode .secao-conteudo h3 {
+    color: #ce93d8;
+}
+
+body.dark-mode .botao,
+body.dark-mode .opcao-config button {
+    background-color: #6a1b9a;
+}
+
+body.dark-mode footer {
+    background-color: #050505;
 }
