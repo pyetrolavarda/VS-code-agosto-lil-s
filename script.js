@@ -2,7 +2,7 @@ let tamanhoFonteAtual = 100;
 
 function toggleConfiguracoes() {
     const painel = document.getElementById('painel-config');
-    painel.style.display = (painel.style.display === 'block') ? 'none' : 'block';
+    painel.classList.toggle('painel-oculto');
 }
 
 function alterarFonte(variacao) {
@@ -24,11 +24,12 @@ function mostrarConteudo(opcao) {
         areaConteudo.innerHTML = `
             <strong class="titulo-secao">Lei Maria da Penha (Lei nº 11.340/2006)</strong>
             <p>Sancionada em 7 de agosto de 2006, é a principal lei no Brasil voltada à prevenção e punição da violência doméstica e familiar contra a mulher.</p>
+            <img src="https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?auto=format&fit=crop&w=800&q=80" alt="Justiça e Proteção" class="imagem-conteudo">
             <p>Garante <strong>Medidas Protetivas de Urgência</strong>, tais como afastamento imediato do agressor do lar e proibição de aproximação ou contato com a vítima.</p>
-            <strong style="color:#6a1b9a;">Os 5 Tipos de Violência Previstos:</strong>
+            <strong style="color:#6a1b9a; display:block; margin-top:10px;">Os 5 Tipos de Violência Previstos:</strong>
             <ul>
                 <li><strong>Física:</strong> Qualquer conduta que ofenda a integridade ou saúde corporal.</li>
-                <li><strong>Psicológica:</strong> Ações que causam dano emocional, humillation ou controle de ações.</li>
+                <li><strong>Psicológica:</strong> Ações que causam dano emocional, humilhação ou controle de ações.</li>
                 <li><strong>Sexual:</strong> Presenciar ou participar de relação sexual não desejada mediante coerção.</li>
                 <li><strong>Patrimonial:</strong> Subtração, retenção ou destruição de bens e documentos.</li>
                 <li><strong>Moral:</strong> Atos de calúnia, difamação ou injúria.</li>
@@ -38,6 +39,7 @@ function mostrarConteudo(opcao) {
         areaConteudo.innerHTML = `
             <strong class="titulo-secao">Como e Onde Denunciar</strong>
             <p>Canais oficiais, gratuitos, seguros e confidenciais disponíveis para pedido de socorro ou orientação:</p>
+            <img src="https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&w=800&q=80" alt="Canais de Atendimento" class="imagem-conteudo">
             <ul>
                 <li><strong>Ligue 180 (Central de Atendimento à Mulher):</strong> Serviço gratuito e anônimo, disponível 24 horas por dia em todo o Brasil.</li>
                 <li><strong>Ligue 190 (Polícia Militar):</strong> Indicado para situações de emergência ou quando a agressão estiver acontecendo em tempo real.</li>
@@ -49,6 +51,7 @@ function mostrarConteudo(opcao) {
         areaConteudo.innerHTML = `
             <strong class="titulo-secao">Rede de Apoio Presencial</strong>
             <p>Órgãos públicos e serviços capacitados para oferecer suporte social, psicológico e jurídico gratuito:</p>
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Rede de Apoio" class="imagem-conteudo">
             <ul>
                 <li><strong>DEAM:</strong> Delegacia Especializada de Atendimento à Mulher.</li>
                 <li><strong>CRAM / RAM:</strong> Centros de Referência de Atendimento à Mulher com suporte psicológico e social.</li>
