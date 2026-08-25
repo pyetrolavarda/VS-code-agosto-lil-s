@@ -1,17 +1,20 @@
+/* Variáveis de cores e tamanho de fonte */
 :root {
     --bg-color: #fdf8ff;
     --text-color: #333333;
-    --primary-color: #8e44ad;
+    --primary-color: #8e44ad; /* Cor lilás/roxa */
     --card-bg: #ffffff;
     --font-base: 16px;
 }
 
+/* Variáveis para o Modo Escuro */
 .dark-mode {
     --bg-color: #1a1a1a;
     --text-color: #fdf8ff;
     --card-bg: #2d2d2d;
 }
 
+/* Configurações gerais da página */
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -19,7 +22,7 @@ body {
     font-size: var(--font-base);
     margin: 0;
     padding: 0;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /* Animação suave na troca de cor */
 }
 
 .container {
@@ -34,7 +37,7 @@ h1 {
     font-size: 2.5em;
 }
 
-/* Configurações */
+/* Estilo do Botão da Engrenagem */
 .config-btn {
     position: fixed;
     top: 20px;
@@ -50,6 +53,7 @@ h1 {
     z-index: 100;
 }
 
+/* Estilo do Menu Oculto */
 .config-menu {
     position: fixed;
     top: 80px;
@@ -62,6 +66,7 @@ h1 {
     flex-direction: column;
     gap: 10px;
     border: 1px solid var(--primary-color);
+    z-index: 99;
 }
 
 .hidden {
@@ -75,9 +80,15 @@ h1 {
     background: transparent;
     color: var(--text-color);
     border-radius: 4px;
+    transition: background 0.2s;
 }
 
-/* Cartões */
+.config-menu button:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Estilo dos Cartões (Cards) */
 .cards {
     display: flex;
     justify-content: center;
@@ -96,7 +107,7 @@ h1 {
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Efeito de flutuar ao passar o mouse */
 }
 
 .card img {
@@ -106,6 +117,7 @@ h1 {
     object-fit: cover;
 }
 
+/* Botões gerais dos cartões */
 .btn {
     display: inline-block;
     margin-top: 15px;
@@ -115,4 +127,24 @@ h1 {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+}
+
+/* Estilos para as páginas internas (pagina1, pagina2, pagina3) */
+.page-content {
+    margin-top: 80px;
+}
+
+.content-box {
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.content-box .btn {
+    margin-top: 30px;
+    background-color: #555; /* Cor mais neutra para o botão de voltar */
 }
