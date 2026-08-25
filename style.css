@@ -1,185 +1,117 @@
-html {
-    scroll-behavior: smooth;
-}
-
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #fdf8ff;
     color: #333;
     margin: 0;
     padding: 0;
     font-size: 100%;
-    transition: background-color 0.3s, color 0.3s;
 }
 
 header {
     background-color: #6a1b9a;
     color: white;
     text-align: center;
-    padding: 30px 20px;
+    padding: 30px;
     position: relative;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.3em;
 }
 
 #btn-config {
     position: absolute;
     top: 15px;
     right: 15px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #4a148c;
     color: white;
-    border: 1px solid white;
-    padding: 8px 12px;
+    border: none;
+    padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
-}
-
-#btn-config:hover {
-    background-color: rgba(255, 255, 255, 0.4);
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 900px;
     margin: 30px auto;
-    padding: 0 20px;
-}
-
-.painel-oculto {
-    display: none !important;
+    padding: 20px;
 }
 
 #painel-config {
-    background-color: white;
+    background-color: #f3e5f5;
     border: 2px solid #8e24aa;
-    padding: 15px 20px;
+    padding: 15px;
     border-radius: 8px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
 }
 
 .opcao-config {
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    margin-bottom: 10px;
 }
 
 .opcao-config button {
     background-color: #8e24aa;
     color: white;
     border: none;
-    padding: 6px 12px;
+    padding: 5px 10px;
     border-radius: 4px;
     cursor: pointer;
-    font-weight: bold;
 }
 
 .botoes-container {
     display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    margin-bottom: 25px;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .botao {
     flex: 1;
     background-color: #8e24aa;
     color: white;
-    padding: 18px;
-    text-align: center;
-    border-radius: 8px;
-    font-weight: bold;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
     font-size: 1.1em;
-    text-decoration: none;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
 }
 
 .botao:hover {
     background-color: #4a148c;
-    transform: translateY(-2px);
 }
 
 .secao-conteudo {
     background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    border-left: 5px solid #8e24aa;
-}
-
-.secao-conteudo strong.titulo-secao {
-    display: block;
-    font-size: 1.4em;
-    color: #6a1b9a;
-    margin-bottom: 15px;
-}
-
-.secao-conteudo ul {
-    line-height: 1.6;
-}
-
-.secao-conteudo li {
-    margin-bottom: 10px;
-}
-
-.galeria {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.galeria img {
-    flex: 1;
-    max-width: 100%;
+    padding: 25px;
     border-radius: 8px;
-    object-fit: cover;
+    border-left: 5px solid #8e24aa;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.secao-conteudo h2 {
+    color: #6a1b9a;
+    margin-top: 0;
 }
 
 footer {
     background-color: #222;
     color: white;
     text-align: center;
-    padding: 20px;
-    margin-top: 50px;
+    padding: 15px;
+    margin-top: 40px;
 }
 
-/* Modo Escuro */
+/* Regras do Modo Escuro */
 body.dark-mode {
     background-color: #121212;
-    color: #e0e0e0;
+    color: #eee;
 }
 
-body.dark-mode header {
-    background-color: #3b0066;
-}
-
-body.dark-mode #painel-config,
-body.dark-mode .secao-conteudo {
+body.dark-mode .secao-conteudo, 
+body.dark-mode #painel-config {
     background-color: #1e1e1e;
-    color: #e0e0e0;
-    border-left-color: #ba68c8;
+    color: #eee;
 }
 
-body.dark-mode .secao-conteudo strong.titulo-secao {
+body.dark-mode .secao-conteudo h2 {
     color: #ce93d8;
-}
-
-body.dark-mode .botao,
-body.dark-mode .opcao-config button {
-    background-color: #6a1b9a;
-}
-
-body.dark-mode footer {
-    background-color: #050505;
 }
