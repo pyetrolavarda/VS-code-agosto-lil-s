@@ -1,117 +1,118 @@
-* {
-    box-sizing: border-box;
+:root {
+    --bg-color: #fdf8ff;
+    --text-color: #333333;
+    --primary-color: #8e44ad;
+    --card-bg: #ffffff;
+    --font-base: 16px;
+}
+
+.dark-mode {
+    --bg-color: #1a1a1a;
+    --text-color: #fdf8ff;
+    --card-bg: #2d2d2d;
 }
 
 body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
     font-family: Arial, sans-serif;
-    background-color: #fdf8ff;
-    color: #333;
+    font-size: var(--font-base);
     margin: 0;
     padding: 0;
-    font-size: 100%;
-}
-
-header {
-    background-color: #6a1b9a;
-    color: white;
-    text-align: center;
-    padding: 30px;
-    position: relative;
-}
-
-#btn-config {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background-color: #4a148c;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .container {
-    max-width: 900px;
-    margin: 30px auto;
+    max-width: 1000px;
+    margin: 0 auto;
     padding: 20px;
-}
-
-#painel-config {
-    background-color: #f3e5f5;
-    border: 2px solid #8e24aa;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-.opcao-config {
-    margin-bottom: 10px;
-}
-
-.opcao-config button {
-    background-color: #8e24aa;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.botoes-container {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.botao {
-    flex: 1;
-    background-color: #8e24aa;
-    color: white;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1em;
-    cursor: pointer;
-}
-
-.botao:hover {
-    background-color: #4a148c;
-}
-
-.secao-conteudo {
-    background-color: white;
-    padding: 25px;
-    border-radius: 8px;
-    border-left: 5px solid #8e24aa;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.secao-conteudo h2 {
-    color: #6a1b9a;
-    margin-top: 0;
-}
-
-footer {
-    background-color: #222;
-    color: white;
     text-align: center;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 2.5em;
+}
+
+/* Configurações */
+.config-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+.config-menu {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background-color: var(--card-bg);
     padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid var(--primary-color);
+}
+
+.hidden {
+    display: none;
+}
+
+.config-menu button {
+    padding: 8px;
+    cursor: pointer;
+    border: 1px solid var(--primary-color);
+    background: transparent;
+    color: var(--text-color);
+    border-radius: 4px;
+}
+
+/* Cartões */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
     margin-top: 40px;
 }
 
-/* Regras do Modo Escuro */
-body.dark-mode {
-    background-color: #121212;
-    color: #eee;
+.card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 300px;
+    padding: 20px;
+    transition: transform 0.2s;
 }
 
-body.dark-mode .secao-conteudo, 
-body.dark-mode #painel-config {
-    background-color: #1e1e1e;
-    color: #eee;
+.card:hover {
+    transform: translateY(-5px);
 }
 
-body.dark-mode .secao-conteudo h2 {
-    color: #ce93d8;
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
 }
