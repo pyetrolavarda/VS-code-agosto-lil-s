@@ -101,8 +101,6 @@ header h1 {
     font-weight: bold;
     font-size: 1.1em;
     cursor: pointer;
-    text-decoration: none;
-    display: block;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: background-color 0.3s, transform 0.2s;
 }
@@ -139,22 +137,6 @@ header h1 {
     object-fit: cover;
 }
 
-.botao-voltar {
-    display: inline-block;
-    background-color: #6a1b9a;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-bottom: 20px;
-    transition: background-color 0.3s;
-}
-
-.botao-voltar:hover {
-    background-color: #4a148c;
-}
-
 footer {
     background-color: #222;
     color: white;
@@ -187,7 +169,6 @@ body.dark-mode .secao-conteudo h3 {
 }
 
 body.dark-mode .botao,
-body.dark-mode .botao-voltar,
 body.dark-mode .opcao-config button {
     background-color: #6a1b9a;
 }
