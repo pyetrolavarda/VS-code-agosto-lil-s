@@ -2,7 +2,11 @@ let tamanhoFonteAtual = 100;
 
 function toggleConfiguracoes() {
     const painel = document.getElementById('painel-config');
-    painel.style.display = (painel.style.display === 'block') ? 'none' : 'block';
+    if (painel.style.display === 'block') {
+        painel.style.display = 'none';
+    } else {
+        painel.style.display = 'block';
+    }
 }
 
 function alterarFonte(variacao) {
