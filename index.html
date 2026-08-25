@@ -3,73 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Agosto Lilás Premium</title>
-    
-    <!-- Fonte Moderna do Google -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    
-    <!-- Ícone da Engrenagem -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    
+    <title>Agosto Lilás - Conscientização</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Botão de Configurações -->
-    <button id="btn-config" class="config-btn" onclick="toggleMenu()" title="Configurações">
-        <span class="material-symbols-outlined">settings</span>
-    </button>
+    <header>
+        <button id="btn-config" onclick="toggleConfiguracoes()">⚙️ Configurações</button>
+        <h1>Introdução ao Agosto Lilás</h1>
+        <p>Conscientização e combate à violência contra a mulher</p>
+    </header>
 
-    <!-- Menu de Configurações -->
-    <div id="menu-config" class="config-menu hidden">
-        <h3>Acessibilidade</h3>
-        <button onclick="mudarTema()">Luminosidade 🌓</button>
-        <div class="font-controls">
-            <button onclick="mudarFonte(1)">A+</button>
-            <button onclick="mudarFonte(-1)">A-</button>
-        </div>
-    </div>
-
-    <!-- Header com Gradiente -->
-    <div class="hero-header">
-        <h1>Agosto Lilás</h1>
-        <p>A informação é a nossa maior arma. Conheça, apoie e denuncie. O respeito e a igualdade devem ser praticados todos os dias.</p>
-    </div>
-
-    <!-- Conteúdo Principal -->
     <main class="container">
-        <section class="cards">
-            <!-- Cartão 1 -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=400&q=80" alt="Mulher sorrindo">
-                <div class="card-content">
-                    <h2>O que é a campanha?</h2>
-                    <p>Entenda a história do Agosto Lilás e a importância do debate na sociedade.</p>
-                    <a href="pagina1.html" class="btn">Saiba Mais</a>
-                </div>
-            </div>
 
-            <!-- Cartão 2 -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1529156069898-49953eb1b5ce?auto=format&fit=crop&w=400&q=80" alt="Mãos unidas">
-                <div class="card-content">
-                    <h2>Como Ajudar?</h2>
-                    <p>Veja como identificar situações de perigo e onde buscar ajuda imediatamente.</p>
-                    <a href="pagina2.html" class="btn">Canais de Ajuda</a>
-                </div>
+        <!-- Painel de Configurações de Acessibilidade -->
+        <div id="painel-config" class="painel-oculto">
+            <h3>Acessibilidade e Personalização</h3>
+            <div class="opcao-config">
+                <span>Tamanho do Texto:</span>
+                <button onclick="alterarFonte(10)">A+</button>
+                <button onclick="alterarFonte(-10)">A-</button>
             </div>
+            <div class="opcao-config">
+                <span>Modo de Exibição:</span>
+                <button onclick="alternarTema()">Alternar Tema (Claro/Escuro)</button>
+            </div>
+        </div>
 
-            <!-- Cartão 3 -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?auto=format&fit=crop&w=400&q=80" alt="Livro e justiça">
-                <div class="card-content">
-                    <h2>Lei Maria da Penha</h2>
-                    <p>Conheça a lei nº 11.340/2006 que protege as mulheres no Brasil.</p>
-                    <a href="pagina3.html" class="btn">Conhecer a Lei</a>
-                </div>
+        <!-- 3 Botões divididos igualmente -->
+        <div class="botoes-container">
+            <button class="botao" onclick="mostrarConteudo('lei')">O que é a Lei?</button>
+            <button class="botao" onclick="mostrarConteudo('denuncia')">Como Denunciar</button>
+            <button class="botao" onclick="mostrarConteudo('apoio')">Rede de Apoio</button>
+        </div>
+
+        <!-- Área de Conteúdo Exclusivo (atualizada via JavaScript) -->
+        <div id="conteudo-dinamico" class="secao-conteudo">
+            <h2>Selecione uma opção acima</h2>
+            <p>Clique em um dos três botões para visualizar o conteúdo completo sobre a Lei Maria da Penha, canais de denúncia ou rede de apoio.</p>
+        </div>
+
+        <!-- Introdução Geral -->
+        <section class="secao-conteudo">
+            <h2>Sobre a Campanha</h2>
+            <p>O <strong>Agosto Lilás</strong> é uma campanha de conscientização pelo fim da violência contra a mulher, criada em referência ao aniversário da <strong>Lei Maria da Penha</strong> (7 de agosto de 2006).</p>
+            <p>O objetivo é informar a população sobre as formas de prevenção e os canais de denúncia, como o <strong>Ligue 180</strong>.</p>
+            
+            <div class="galeria">
+                <img src="https://via.placeholder.com/400x250/8e24aa/ffffff?text=Lei+Maria+da+Penha" alt="Lei Maria da Penha">
+                <img src="https://via.placeholder.com/400x250/ab47bc/ffffff?text=Ligue+180" alt="Ligue 180">
+                <img src="https://via.placeholder.com/400x250/ce93d8/ffffff?text=Conscientização" alt="Conscientização">
             </div>
         </section>
+
+        <!-- Conteúdo Complementar -->
+        <section class="secao-conteudo">
+            <h2>Conteúdo Complementar</h2>
+            <p>A violência doméstica pode afetar mulheres de todas as idades e classes sociais. O apoio de toda a sociedade é fundamental para identificar os sinais e auxiliar as vítimas a romperem o ciclo da violência.</p>
+        </section>
+
     </main>
+
+    <footer>
+        <p><strong>Criador(a):</strong> [Seu Nome Aqui]</p>
+        <p><strong>Ano:</strong> 2026</p>
+        <p><strong>Instituição:</strong> [Nome da Instituição]</p>
+        <p><strong>Local:</strong> [Sua Cidade - UF]</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
