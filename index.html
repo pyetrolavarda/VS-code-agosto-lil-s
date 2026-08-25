@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agosto Lilás - Conscientização</title>
+    <!-- Conecta o CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <button id="btn-config" onclick="toggleConfiguracoes()">⚙️ Configurações</button>
-        <h1>Introdução ao Agosto Lilás</h1>
+        <h1>Agosto Lilás</h1>
         <p>Conscientização e combate à violência contra a mulher</p>
     </header>
 
     <main class="container">
 
-        <!-- Painel de Acessibilidade -->
-        <div id="painel-config" class="painel-oculto">
-            <strong>Acessibilidade e Personalização</strong>
+        <!-- Painel de Acessibilidade (Inicia Oculto) -->
+        <div id="painel-config" style="display: none;">
+            <h3>Acessibilidade e Personalização</h3>
             <div class="opcao-config">
                 <span>Tamanho do Texto:</span>
                 <button onclick="alterarFonte(10)">A+</button>
@@ -26,79 +27,31 @@
             </div>
             <div class="opcao-config">
                 <span>Modo de Exibição:</span>
-                <button onclick="alternarTema()">Alternar Tema (Claro/Escuro)</button>
+                <button onclick="alternarTema()">Alternar Tema</button>
             </div>
         </div>
 
-        <!-- Botões de Rolagem Direta -->
+        <!-- Botões de Navegação -->
         <div class="botoes-container">
-            <a href="#lei" class="botao">O que é a Lei?</a>
-            <a href="#denuncia" class="botao">Como Denunciar</a>
-            <a href="#apoio" class="botao">Rede de Apoio</a>
+            <button class="botao" onclick="mostrarConteudo('lei')">O que é a Lei?</button>
+            <button class="botao" onclick="mostrarConteudo('denuncia')">Como Denunciar</button>
+            <button class="botao" onclick="mostrarConteudo('apoio')">Rede de Apoio</button>
         </div>
 
-        <!-- Apresentação Geral -->
-        <section class="secao-conteudo">
-            <strong class="titulo-secao">Sobre a Campanha</strong>
-            <p>O <strong>Agosto Lilás</strong> é uma campanha nacional criada para conscientizar a sociedade sobre o fim da violência contra a mulher, em referência ao aniversário da <strong>Lei Maria da Penha</strong> (7 de agosto de 2006).</p>
-            
-            <div class="galeria">
-                <img src="https://via.placeholder.com/400x250/6a1b9a/ffffff?text=Agosto+Lil%C3%A1s" alt="Agosto Lilás">
-                <img src="https://via.placeholder.com/400x250/8e24aa/ffffff?text=Respeito+e+Prote%C3%A7%C3%A3o" alt="Respeito e Proteção">
-                <img src="https://via.placeholder.com/400x250/ab47bc/ffffff?text=Ligue+180" alt="Ligue 180">
-            </div>
-        </section>
-
-        <!-- Seção 1: Lei Maria da Penha -->
-        <section id="lei" class="secao-conteudo">
-            <strong class="titulo-secao">O que é a Lei Maria da Penha?</strong>
-            <p>Sancionada em 7 de agosto de 2006 (Lei nº 11.340), é o principal instrumento jurídico para prevenir e punir a violência doméstica e familiar contra a mulher no Brasil.</p>
-            <p>Garante <strong>Medidas Protetivas de Urgência</strong>, como o afastamento imediato do agressor do lar e a proibição de contato com a vítima.</p>
-            
-            <strong style="color: #6a1b9a; display: block; margin-top: 15px;">Os 5 Tipos de Violência Previstos:</strong>
-            <ul>
-                <li><strong>Física:</strong> Qualquer conduta que ofenda a integridade ou saúde corporal.</li>
-                <li><strong>Psicológica:</strong> Ações que causam dano emocional, humilhação ou controle sobre as ações da vítima.</li>
-                <li><strong>Sexual:</strong> Presenciar, manter ou participar de relação sexual não desejada mediante coerção.</li>
-                <li><strong>Patrimonial:</strong> Subtração, retenção ou destruição de bens, instrumentos de trabalho e documentos.</li>
-                <li><strong>Moral:</strong> Qualquer conduta que configure calúnia, difamação ou injúria.</li>
-            </ul>
-        </section>
-
-        <!-- Seção 2: Como Denunciar -->
-        <section id="denuncia" class="secao-conteudo">
-            <strong class="titulo-secao">Como Denunciar?</strong>
-            <p>Existem diversos canais oficiais gratuitos, confidenciais e disponíveis para pedido de ajuda ou orientação:</p>
-            <ul>
-                <li><strong>Ligue 180 (Central de Atendimento à Mulher):</strong> Gratuito, anônimo e disponível 24 horas por dia.</li>
-                <li><strong>Ligue 190 (Polícia Militar):</strong> Para situações de emergência ou flagrante agressão.</li>
-                <li><strong>WhatsApp Ligue 180:</strong> Atendimento via chat pelo número (61) 99656-5008.</li>
-                <li><strong>Aplicativo Direitos Humanos Brasil:</strong> Canal de registro de denúncias online.</li>
-            </ul>
-        </section>
-
-        <!-- Seção 3: Rede de Apoio -->
-        <section id="apoio" class="secao-conteudo">
-            <strong class="titulo-secao">Rede de Apoio Presencial</strong>
-            <p>A rede de atendimento conta com órgãos públicos especializados para oferecer suporte jurídico, psicológico e social gratuito:</p>
-            <ul>
-                <li><strong>DEAM:</strong> Delegacia Especializada de Atendimento à Mulher.</li>
-                <li><strong>CRAM / RAM:</strong> Centros de Referência com acompanhamento psicológico e social.</li>
-                <li><strong>CRAS / CREAS:</strong> Centros de assistência social para auxílio a famílias em vulnerabilidade.</li>
-                <li><strong>Defensoria Pública da Mulher:</strong> Orientação e defesa jurídica gratuita.</li>
-                <li><strong>Casas-Abrigo:</strong> Acolhimento temporário e sigiloso para vítimas em risco grave.</li>
-            </ul>
-        </section>
+        <!-- Área onde o conteúdo muda ao clicar nos botões -->
+        <div id="conteudo-dinamico" class="secao-conteudo">
+            <h2>Bem-vindo à Campanha</h2>
+            <p>O <strong>Agosto Lilás</strong> é o mês de conscientização pelo fim da violência contra a mulher. Ele faz referência ao aniversário da <strong>Lei Maria da Penha</strong>.</p>
+            <p><strong>Clique nos botões acima</strong> para ler mais sobre as leis, descobrir como fazer uma denúncia anônima ou encontrar a rede de apoio mais próxima.</p>
+        </div>
 
     </main>
 
     <footer>
-        <p><strong>Criador(a):</strong> [Seu Nome Aqui]</p>
-        <p><strong>Ano:</strong> 2026</p>
-        <p><strong>Instituição:</strong> [Nome da Instituição]</p>
-        <p><strong>Local:</strong> [Sua Cidade - UF]</p>
+        <p>Criado para fins educativos | Agosto Lilás</p>
     </footer>
 
+    <!-- Conecta o JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
