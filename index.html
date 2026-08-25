@@ -4,66 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agosto Lilás - Conscientização</title>
+    <!-- Conectando com o arquivo CSS externo -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <button id="btn-config" onclick="toggleConfiguracoes()">⚙️ Configurações</button>
         <h1>Introdução ao Agosto Lilás</h1>
         <p>Conscientização e combate à violência contra a mulher</p>
     </header>
 
     <main class="container">
 
-        <!-- PAINEL DE CONFIGURAÇÕES (ESCONDIDO POR PADRÃO) -->
-        <div id="painel-config" class="painel-oculto">
-            <h3>Acessibilidade e Personalização</h3>
-            <div class="opcao-config">
-                <span>Tamanho do Texto:</span>
-                <button onclick="alterarFonte(10)">A+</button>
-                <button onclick="alterarFonte(-10)">A-</button>
-            </div>
-            <div class="opcao-config">
-                <span>Modo de Exibição:</span>
-                <button onclick="alternarTema()">Alternar Tema (Claro/Escuro)</button>
-            </div>
-        </div>
-
+        <!-- 3 DIVS / BOTÕES DIVIDIDOS IGUALMENTE -->
         <div class="botoes-container">
             <button class="botao" onclick="mostrarInfo('lei')">O que é a Lei?</button>
             <button class="botao" onclick="mostrarInfo('denuncia')">Como Denunciar</button>
             <button class="botao" onclick="mostrarInfo('apoio')">Rede de Apoio</button>
         </div>
 
+        <!-- Área onde o JavaScript vai exibir mensagens interativas ao clicar nos botões -->
         <div id="mensagem-interativa" class="mensagem-oculta"></div>
 
+        <!-- INFORMAÇÕES ABORDANDO O TEMA -->
         <section class="secao-conteudo">
             <h2>Sobre a Campanha</h2>
-            <p>O <strong>Agosto Lilás</strong> é uma campanha de conscientização pelo fim da violência contra a mulher, criada em referência ao aniversário da <strong>Lei Maria da Penha</strong> (7 de agosto de 2006).</p>
-            <p>O objetivo é informar a população sobre as formas de prevenção e os canais de denúncia, como o <strong>Ligue 180</strong>.</p>
+            <p>O <strong>Agosto Lilás</strong> é uma campanha de conscientização pelo fim da violência contra a mulher. Ela faz referência ao aniversário da <strong>Lei Maria da Penha</strong>, sancionada em 7 de agosto de 2006, que é um marco na proteção dos direitos das mulheres no Brasil.</p>
+            <p>O objetivo do mês é dar visibilidade ao tema, informar a população sobre os tipos de violência (física, psicológica, moral, sexual e patrimonial) e divulgar os canais de denúncia, como o <strong>Ligue 180</strong>.</p>
             
+            <!-- GALERIA DE IMAGENS -->
             <div class="galeria">
-                <img src="https://via.placeholder.com/400x250/8e24aa/ffffff?text=Lei+Maria+da+Penha" alt="Lei Maria da Penha">
-                <img src="https://via.placeholder.com/400x250/ab47bc/ffffff?text=Ligue+180" alt="Ligue 180">
-                <img src="https://via.placeholder.com/400x250/ce93d8/ffffff?text=Conscientização" alt="Conscientização">
+                <img src="https://via.placeholder.com/400x250/8e24aa/ffffff?text=Lei+Maria+da+Penha" alt="Imagem ilustrativa 1">
+                <img src="https://via.placeholder.com/400x250/ab47bc/ffffff?text=Ligue+180" alt="Imagem ilustrativa 2">
+                <img src="https://via.placeholder.com/400x250/ce93d8/ffffff?text=Conscientização" alt="Imagem ilustrativa 3">
             </div>
         </section>
 
+        <!-- CONTEÚDO COMPLEMENTAR -->
         <section class="secao-conteudo">
             <h2>Conteúdo Complementar</h2>
-            <p>A violência doméstica pode ser física, psicológica, moral, sexual ou patrimonial. O apoio de toda a sociedade é fundamental para identificar os sinais e auxiliar as vítimas através dos centros comunitários e delegacias especializadas (DEAM).</p>
+            <p>A violência doméstica não escolhe classe social, idade ou região. É dever de toda a sociedade ficar atenta aos sinais e apoiar as vítimas. Se você conhece alguém que precisa de ajuda, não hesite em procurar os órgãos competentes, como a Delegacia da Mulher (DEAM) ou os Centros de Referência de Atendimento à Mulher (CRAM).</p>
         </section>
 
     </main>
 
+    <!-- RODAPÉ COM SEUS DADOS -->
     <footer>
         <p><strong>Criador(a):</strong> [Seu Nome Aqui]</p>
         <p><strong>Ano:</strong> 2026</p>
-        <p><strong>Instituição:</strong> [Nome da Instituição]</p>
+        <p><strong>Instituição:</strong> [Nome da sua Escola/Instituição]</p>
         <p><strong>Local:</strong> [Sua Cidade - UF]</p>
     </footer>
 
+    <!-- Conectando com o arquivo JavaScript externo -->
     <script src="script.js"></script>
 </body>
 </html>
